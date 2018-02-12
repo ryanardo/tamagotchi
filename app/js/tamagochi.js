@@ -8,11 +8,18 @@ export class Tamagotchi {
 		this.playLevel = 420;
 		this.sleepLevel = 69;
 	}
+
+	resetTomagachi(foodLevel, playLevel, sleepLevel) {
+		this.foodLevel = foodLevel;
+		this.playLevel = playLevel;
+		this.sleepLevel = sleepLevel;
+	}
+
 	//Set Interval
 	setFood() {
 		setInterval(() => {
 			this.foodLevel--;
-		}, 60000)
+		}, 60000);
 	}
 
 	setPlay() {
@@ -28,10 +35,10 @@ export class Tamagotchi {
 	}
 
 	itDed() {
-		if (this.foodLevel > 0 || this.sleepLevel > 0) {
-			return false;
-		} else {
+		if (this.foodLevel <= 0 || this.sleepLevel <= 0) {
 			return true;
+		} else {
+			return false;
 		}
 	}
 
