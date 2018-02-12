@@ -75,4 +75,11 @@ describe('Tamagotchi', function () {
 		});
 	});
 
+	describe('foodSnack', function () {
+		it("[foodSnack] should increase kevin's foodLevel by 10.", function () {
+			kevin.foodSnack(1);
+			assert.equal(110, kevin.foodLevel);
+		});
+	});
+
 });
