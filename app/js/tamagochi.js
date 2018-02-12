@@ -1,5 +1,3 @@
-import { Care } from './tamagotchi.care.js';
-
 export class Tamagotchi {
 
 	constructor(name) {
@@ -48,5 +46,25 @@ export class Tamagotchi {
 		} else {
 			return false;
 		}
+	}
+
+	foodSnack(numberOfSnacks) {
+		const snack = 10 * numberOfSnacks;
+		this.foodLevel += snack;
+	}
+
+	playRecess() {
+		const recess = 10;
+		const food = 10;
+		const sleep = 10;
+		this.playLevel += recess;
+		this.foodLevel -= food;
+		this.sleepLevel -= sleep;
+	}
+
+	sleepNap() {
+		const nap = 10;
+		let time = 30000
+		this.sleepLevel += nap;
 	}
 }
