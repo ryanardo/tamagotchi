@@ -82,4 +82,22 @@ describe('Tamagotchi', function () {
 		});
 	});
 
+	describe('playRecess', function () {
+		it("[playRecess] should increase Kevin's playLevel by 10, and decrease Kevin's foodLevel, and sleepLevel by 10.", function () {
+			kevin.playRecess(1);
+			assert.equal(90, kevin.foodLevel);
+			assert.equal(430, kevin.playLevel);
+			assert.equal(59, kevin.sleepLevel);
+		});
+	});
+
+	describe('sleepNap', function () {
+		it("[sleepNap] should increase Kevin's sleepLevel by 10.", function () {
+			kevin.sleepNap(4);
+			assert.equal(89, kevin.sleepLevel);
+		});
+	});
+
+
+
 });
