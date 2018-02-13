@@ -94,10 +94,9 @@ describe('Tamagotchi', function () {
 	describe('sleepNap', function () {
 		it("[sleepNap] should increase Kevin's sleepLevel by 10.", function () {
 			kevin.sleepNap(4);
-			assert.equal(89, kevin.sleepLevel);
+			assert.equal(109, kevin.sleepLevel);
 		});
 	});
-
 
 
 });
