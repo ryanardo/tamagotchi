@@ -54,17 +54,17 @@ export class Tamagotchi {
 	}
 
 	playRecess(hoursPlayed) {
-		const recess = 10;
-		const food = 10;
-		const sleep = 10;
-		this.playLevel += recess * hoursPlayed;
-		this.foodLevel -= food * hoursPlayed;
-		this.sleepLevel -= sleep * hoursPlayed;
+		const recess = 10 * hoursPlayed;
+		const food = 10 * hoursPlayed;
+		const sleep = 10 * hoursPlayed;
+		this.playLevel += recess;
+		this.foodLevel -= food;
+		this.sleepLevel -= sleep;
 
 	}
 
 	sleepNap(timeSlept) {
-		const nap = 10;
-		this.sleepLevel += nap * timeSlept;
+		const nap = 10 * timeSlept;
+		this.sleepLevel += nap;
 	}
 }
