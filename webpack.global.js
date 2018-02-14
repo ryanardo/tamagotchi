@@ -23,7 +23,6 @@ module.exports = {
 		path: path.resolve(__dirname, 'build')
 	},
 	module: {
-
 		rules: [
 			{
 				test: /\.css$/,
@@ -33,12 +32,19 @@ module.exports = {
 			]
 		},
 			{
+				test: /\.(png|svg|jpg|gif)$/,
+				use: [
+           'file-loader'
+         ]
+       },
+			{
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['@babel/preset-env']
+						presets: ['@babel/preset-env'],
+						plugins: [require('@babel/plugin-proposal-object-rest-spread')]
 					}
 				}
     }
